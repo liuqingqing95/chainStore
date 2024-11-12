@@ -1,0 +1,41 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\common\\config\\config.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "default_module",
+        "port",
+        "weixin",
+        "appid",
+        "secret",
+        "mch_id",
+        "partner_key",
+        "notify_url",
+        "express",
+        "appkey",
+        "request_url",
+        "mianexpress",
+        "print_url",
+        "ip_server_url",
+        "qiniu",
+        "access_key",
+        "secret_key",
+        "bucket",
+        "domain",
+        "qiniuHttps",
+        "zoneNum",
+        "aliexpress",
+        "url",
+        "appcode",
+        "sfLastNo",
+        "templateId"
+    ],
+    "mappings": "AAAA;AACAA,OAAOC,OAAP,GAAiB;AACfC,kBAAgB,KADD;AAEfC,QAAM,MAFS;AAGfC,UAAQ;AACNC,WAAO,oBADD,EACuB;AAC7BC,YAAQ,kCAFF,EAEsC;AAC5CC,YAAQ,aAHF,EAGiB;AACvBC,iBAAa,uBAJP,EAIgC;AACtCC,gBAAY,qCALN,CAK6C;AAL7C,GAHO;AAUfC,WAAS;AACP;AACA;AACA;AACAL,WAAO,UAJA,EAIY;AACnBM,YAAQ,0BALD,EAK6B;AACpCC,iBAAa;AANN,GAVM;AAkBfC,eAAa;AACXR,WAAO,QADI,EACM;AACjBM,YAAQ,6BAFG,EAE4B;AACvCC,iBAAa,kDAHF;AAIXE,eACE,8EALS;AAMXC,mBAAe;AANJ,GAlBE;AA0BfC,SAAO;AACLC,gBAAY,sBADP,EAC+B;AACpCC,gBAAY,wBAFP,EAEiC;AACtCC,YAAQ,YAHH,EAGiB;AACtBC,YAAQ,SAJH,CAIc;AAJd,GA1BQ;AAgCf;AACAC,cAAY;AACVJ,gBAAY,2BADF,EAC+B;AACzCC,gBAAY,wBAFF,EAE4B;AACtCC,YAAQ,YAHE,EAGY;AACtBC,YAAQ,SAJE,EAIS;AACnB;AACAE,aAAS,CANC,CAME;AANF,GAjCG;AAyCfC,cAAY;AACV;AACAC,SAAK,yCAFK,EAEsC;AAChDC,aAAS,mBAHC,EAGoB;AAC9BC,cAAU,MAJA,CAIQ;AAJR,GAzCG;AA+CfC,cAAY;AACV;AADU;AA/CG,CAAjB",
+    "file": "..\\..\\..\\src\\common\\config\\config.js",
+    "sourcesContent": [
+        "// default config\r\nmodule.exports = {\r\n  default_module: \"api\",\r\n  port: '8801',\r\n  weixin: {\r\n    appid: \"wx0914f9c4ce38f7ff\", // 小程序 appid\r\n    secret: \"0a8d053491943a48dc97a0df2d44eea1\", // 小程序密钥\r\n    mch_id: \"15988888888\", // 商户帐号ID\r\n    partner_key: \"asdasdasdasdasdasdasd\", // 微信支付密钥\r\n    notify_url: \"https://www.您的域名.com/api/pay/notify\", // 微信支付异步通知\r\n  },\r\n  express: {\r\n    // 已废弃，之后考虑改回来，做成和阿里云的物流查询可以切换，方便大家的使用\r\n    // 免费的，但是顺丰的话，要配合快递鸟的电子面单\r\n    // 快递物流信息查询使用的是快递鸟接口，申请地址：http://www.kdniao.com/\r\n    appid: \"12312312\", // 对应快递鸟用户后台 用户ID\r\n    appkey: \"123123123123123123123123\", // 对应快递鸟用户后台 API key\r\n    request_url: \"http://api.kdniao.com/Ebusiness/EbusinessOrderHandle.aspx\",\r\n  },\r\n  mianexpress: {\r\n    appid: \"123123\", // 对应快递鸟用户后台 用户ID\r\n    appkey: \"123123-4e61236-94cb5297309a\", // 对应快递鸟用户后台 API key\r\n    request_url: \"http://testapi.kdniao.com:8081/api/EOrderService\",\r\n    print_url:\r\n      \"http://sandboxapi.kdniao.com:8080/kdniaosandbox/gateway/exterfaceInvoke.json\",\r\n    ip_server_url: \"http://www.kdniao.com/External/GetIp.aspx\",\r\n  },\r\n  qiniu: {\r\n    access_key: \"asdlakjsdlajlajsdlas\", // 在七牛密钥管理中获取\r\n    secret_key: \"alskdjalksjdlasjdlajsd\", // 在七牛密钥管理中获取\r\n    bucket: \"bucketname\", // 请填自己的bucket的名称\r\n    domain: \"domain/\", // 请填自己的domain域名\r\n  },\r\n  // 在七牛新建一个https的空间，这个是用来存储分享图片的https图片，对应的是goods表中的https_pic_url\r\n  qiniuHttps: {\r\n    access_key: \"asdlakjsdlajlajsdlasasdla\", // 在七牛密钥管理中获取\r\n    secret_key: \"aaaaaaaaaaasdasdasdasd\", // 在七牛密钥管理中获取\r\n    bucket: \"bucketname\", // 自己设置的\r\n    domain: \"domain/\", // 自己设置，例如：'http://img.你的域名.com/',别忘了这个”/“\r\n    // https://developer.qiniu.com/kodo/manual/1671/region-endpoint\r\n    zoneNum: 0, // 这个自己根据地区设置：华东 0；华北 1；华南 2； 北美 3；东南亚 4\r\n  },\r\n  aliexpress: {\r\n    // https://market.aliyun.com/products/56928004/cmapi021863.html?spm=5176.730005.productlist.d_cmapi021863.6ba73524uQjLqE&innerSource=search_%E5%85%A8%E5%9B%BD%E5%BF%AB%E9%80%92%E7%89%A9%E6%B5%81%E6%9F%A5%E8%AF%A2-%E5%BF%AB%E9%80%92%E6%9F%A5%E8%AF%A2%E6%8E%A5%E5%8F%A3#sku=yuncode1586300000\r\n    url: \"http://wuliu.market.alicloudapi.com/kdi\", //阿里云的物流查询api，收费的\r\n    appcode: \"asldjalsjdlasjdla\", // 阿里云后台获取,\r\n    sfLastNo: \"0580\", // 顺丰寄件人后四位，这个根据自己的寄件人手机设置，如果寄件人是不固定的，那么需要在order_express自己写代码了。\r\n  },\r\n  templateId: {\r\n    // deliveryTemplate:\r\n  },\r\n};\r\n"
+    ]
+}

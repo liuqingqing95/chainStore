@@ -1,0 +1,228 @@
+{
+  "api": {
+    "port": "8801",
+    "workers": 0,
+    "stickyCluster": false,
+    "startServerTimeout": 3000,
+    "reloadSignal": "SIGUSR2",
+    "processKillTimeout": 10000,
+    "jsonpCallbackField": "callback",
+    "jsonContentType": "application/json",
+    "jsonpContentType": "application/javascript",
+    "errnoField": "errno",
+    "errmsgField": "errmsg",
+    "defaultErrno": 1000,
+    "validateDefaultErrno": 1001,
+    "default_module": "api",
+    "weixin": {
+      "appid": "wx0914f9c4ce38f7ff",
+      "secret": "0a8d053491943a48dc97a0df2d44eea1",
+      "mch_id": "15988888888",
+      "partner_key": "asdasdasdasdasdasdasd",
+      "notify_url": "https://www.您的域名.com/api/pay/notify"
+    },
+    "express": {
+      "appid": "12312312",
+      "appkey": "123123123123123123123123",
+      "request_url": "http://api.kdniao.com/Ebusiness/EbusinessOrderHandle.aspx"
+    },
+    "mianexpress": {
+      "appid": "123123",
+      "appkey": "123123-4e61236-94cb5297309a",
+      "request_url": "http://testapi.kdniao.com:8081/api/EOrderService",
+      "print_url": "http://sandboxapi.kdniao.com:8080/kdniaosandbox/gateway/exterfaceInvoke.json",
+      "ip_server_url": "http://www.kdniao.com/External/GetIp.aspx"
+    },
+    "qiniu": {
+      "access_key": "asdlakjsdlajlajsdlas",
+      "secret_key": "alskdjalksjdlasjdlajsd",
+      "bucket": "bucketname",
+      "domain": "domain/"
+    },
+    "qiniuHttps": {
+      "access_key": "asdlakjsdlajlajsdlasasdla",
+      "secret_key": "aaaaaaaaaaasdasdasdasd",
+      "bucket": "bucketname",
+      "domain": "domain/",
+      "zoneNum": 0
+    },
+    "aliexpress": {
+      "url": "http://wuliu.market.alicloudapi.com/kdi",
+      "appcode": "asldjalsjdlasjdla",
+      "sfLastNo": "0580"
+    },
+    "templateId": {},
+    "publicController": [
+      "index",
+      "catalog",
+      "auth",
+      "goods",
+      "search",
+      "region",
+      "address"
+    ],
+    "publicAction": [
+      "cart/index",
+      "cart/add",
+      "cart/checked",
+      "cart/update",
+      "cart/delete",
+      "cart/goodscount",
+      "pay/notify"
+    ],
+    "cache": {
+      "type": "file",
+      "file": {
+        "timeout": 86400000,
+        "cachePath": "D:\\workspace\\chainStore\\chainServer\\runtime\\cache",
+        "pathDepth": 1,
+        "gcInterval": 86400000
+      }
+    },
+    "model": {
+      "type": "mysql",
+      "mysql": {
+        "logConnect": true,
+        "logSql": true,
+        "database": "chainstoredb",
+        "prefix": "chain_",
+        "encoding": "utf8mb4",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "root",
+        "password": "123456",
+        "dateStrings": true
+      }
+    },
+    "logger": {
+      "type": "console",
+      "console": {},
+      "file": {
+        "backups": 10,
+        "absolute": true,
+        "maxLogSize": 51200,
+        "filename": "D:\\workspace\\chainStore\\chainServer\\logs\\app.log"
+      },
+      "dateFile": {
+        "level": "ALL",
+        "absolute": true,
+        "pattern": "-yyyy-MM-dd",
+        "alwaysIncludePattern": true,
+        "filename": "D:\\workspace\\chainStore\\chainServer\\logs\\app.log"
+      }
+    },
+    "view": {
+      "type": "nunjucks",
+      "nunjucks": {
+        "viewPath": "D:\\workspace\\chainStore\\chainServer\\view",
+        "sep": "_",
+        "extname": ".html",
+        "options": {}
+      }
+    }
+  },
+  "common": {
+    "port": "8801",
+    "workers": 0,
+    "stickyCluster": false,
+    "startServerTimeout": 3000,
+    "reloadSignal": "SIGUSR2",
+    "processKillTimeout": 10000,
+    "jsonpCallbackField": "callback",
+    "jsonContentType": "application/json",
+    "jsonpContentType": "application/javascript",
+    "errnoField": "errno",
+    "errmsgField": "errmsg",
+    "defaultErrno": 1000,
+    "validateDefaultErrno": 1001,
+    "default_module": "api",
+    "weixin": {
+      "appid": "wx0914f9c4ce38f7ff",
+      "secret": "0a8d053491943a48dc97a0df2d44eea1",
+      "mch_id": "15988888888",
+      "partner_key": "asdasdasdasdasdasdasd",
+      "notify_url": "https://www.您的域名.com/api/pay/notify"
+    },
+    "express": {
+      "appid": "12312312",
+      "appkey": "123123123123123123123123",
+      "request_url": "http://api.kdniao.com/Ebusiness/EbusinessOrderHandle.aspx"
+    },
+    "mianexpress": {
+      "appid": "123123",
+      "appkey": "123123-4e61236-94cb5297309a",
+      "request_url": "http://testapi.kdniao.com:8081/api/EOrderService",
+      "print_url": "http://sandboxapi.kdniao.com:8080/kdniaosandbox/gateway/exterfaceInvoke.json",
+      "ip_server_url": "http://www.kdniao.com/External/GetIp.aspx"
+    },
+    "qiniu": {
+      "access_key": "asdlakjsdlajlajsdlas",
+      "secret_key": "alskdjalksjdlasjdlajsd",
+      "bucket": "bucketname",
+      "domain": "domain/"
+    },
+    "qiniuHttps": {
+      "access_key": "asdlakjsdlajlajsdlasasdla",
+      "secret_key": "aaaaaaaaaaasdasdasdasd",
+      "bucket": "bucketname",
+      "domain": "domain/",
+      "zoneNum": 0
+    },
+    "aliexpress": {
+      "url": "http://wuliu.market.alicloudapi.com/kdi",
+      "appcode": "asldjalsjdlasjdla",
+      "sfLastNo": "0580"
+    },
+    "templateId": {},
+    "cache": {
+      "type": "file",
+      "file": {
+        "timeout": 86400000,
+        "cachePath": "D:\\workspace\\chainStore\\chainServer\\runtime\\cache",
+        "pathDepth": 1,
+        "gcInterval": 86400000
+      }
+    },
+    "model": {
+      "type": "mysql",
+      "mysql": {
+        "logConnect": true,
+        "logSql": true,
+        "database": "chainstoredb",
+        "prefix": "chain_",
+        "encoding": "utf8mb4",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "root",
+        "password": "123456",
+        "dateStrings": true
+      }
+    },
+    "logger": {
+      "type": "console",
+      "console": {},
+      "file": {
+        "backups": 10,
+        "absolute": true,
+        "maxLogSize": 51200,
+        "filename": "D:\\workspace\\chainStore\\chainServer\\logs\\app.log"
+      },
+      "dateFile": {
+        "level": "ALL",
+        "absolute": true,
+        "pattern": "-yyyy-MM-dd",
+        "alwaysIncludePattern": true,
+        "filename": "D:\\workspace\\chainStore\\chainServer\\logs\\app.log"
+      }
+    },
+    "view": {
+      "type": "nunjucks",
+      "nunjucks": {
+        "viewPath": "D:\\workspace\\chainStore\\chainServer\\view",
+        "sep": "_",
+        "extname": ".html",
+        "options": {}
+      }
+    }
+  }
+}

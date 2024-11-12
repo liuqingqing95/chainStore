@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\common\\config\\crontab.js"
+    ],
+    "names": [
+        "path",
+        "require",
+        "module",
+        "exports"
+    ],
+    "mappings": "AAAA,MAAMA,OAAOC,QAAQ,MAAR,CAAb;AACAC,OAAOC,OAAP,GAAiB;AACjB;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAZiB,CAAjB",
+    "file": "..\\..\\..\\src\\common\\config\\crontab.js",
+    "sourcesContent": [
+        "const path = require('path');\r\nmodule.exports = [\r\n// {\r\n//     interval: '60s',\r\n//     enable: true,\r\n//     immediate: true,\r\n//     handle: \"crontab/timetask\"\r\n// }, \r\n// {\r\n//     interval: '10s',\r\n//     enable: false,\r\n//     immediate: true,\r\n//     handle: \"crontab/resetSql\"\r\n// }\r\n]"
+    ]
+}
